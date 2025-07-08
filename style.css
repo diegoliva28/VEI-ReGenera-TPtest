@@ -105,7 +105,7 @@ body {
 .avatar {
   width: 36px;
   height: 36px;
-  background: #e0e0e0;
+  background: var(--color-principal);
   border-radius: 50%;
   display: flex;
   align-items: center;
