@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Objetivos - ReGenera</title>
+    <link rel="stylesheet" href="./styles/objetivos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a class="logo" href="#"><img src="./img/logo.jpeg" alt="Logo ReGenera" height="40"></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#quienes">Quienes somos</a></li>
+                    <li><a href="#consultas">Consultas</a></li>
+                    <li><a href="#objetivos">Objetivos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="#" class="btn-primary">Solicitar consulta</a>
+                <span class="user-icon">👤</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+        <section class="profile-section">
+            <div class="user-profile">
+                <img src="./img/prepadorFisico1.jpg" alt="Foto usuario" class="profile-img">
+                <div class="user-info">
+                    <h2>Juan Manuel Pérez</h2>
+                    <ul>
+                        <li><b>Peso:</b> 80kg</li>
+                        <li><b>Altura:</b> 1.80m</li>
+                        <li><b>Edad:</b> 22</li>
+                        <li><b>Deporte:</b> Fútbol</li>
+                        <li><b>Objetivo:</b> Ganar masa muscular</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="assigned-professional">
+                <h3>Profesional asignado</h3>
+                <button class="btn-prof">Milagros de Cursada</button>
+                <button class="btn-prof">Veganismo</button>
+            </div>
+        </section>
+
+        <section class="diet-section">
+            <h2 class="diet-title">Título de la Dieta: Dieta rica en vitaminas, etc</h2>
+            <div class="dashboard-grid">
+                <div class="calories-card">
+                    <h3>Calorías diarias</h3>
+                    <canvas id="caloriesChart" width="180" height="180"></canvas>
+                    <div class="calories-values">1900 / 2800</div>
+                </div>
+                <div class="meals-list">
+                    <ul>
+                        <li>Desayuno <span class="kcal">Kcal1000</span> <button class="personalize-btn">Personalizar</button></li>
+                        <li>Almuerzo <span class="kcal">Kcal1000</span> <button class="add-btn">+</button></li>
+                        <li>Merienda <span class="kcal">Kcal1000</span> <button class="add-btn">+</button></li>
+                        <li>Cena <span class="kcal">Kcal1000</span> <button class="add-btn">+</button></li>
+                    </ul>
+                </div>
+                <div class="progress-card">
+                    <h3>Progreso</h3>
+                    <div class="progress-month">Mes 4 de 12</div>
+                    <canvas id="progressChart" width="220" height="140"></canvas>
+                </div>
+                <div class="routine-list">
+                    <ul>
+                        <li>Lunes <span class="muscle">Torso</span> <button class="start-btn">Comenzar</button></li>
+                        <li>Martes <span class="muscle">Piernas</span> <button class="start-btn">Comenzar</button></li>
+                        <li>Jueves <span class="muscle">Espalda</span> <button class="start-btn">Comenzar</button></li>
+                        <li>Viernes <span class="muscle">Brazos</span> <button class="start-btn">Comenzar</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Un especialista a la vuelta de tu pantalla</h3>
+                <p>ReGenera</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#objetivo">Objetivo</a>
+                <a href="#consultas">Consultas</a>
+                <a href="#sobre">Sobre nosotros</a>
+                <a href="#profesionales">Profesionales</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <a href="#instagram">Instagram</a>
+                <a href="#linkedin">LinkedIn</a>
+                <a href="#twitter">X</a>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 ALL RIGHTS RESERVED - ReGenera</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // === Calorías diarias (Doughnut) ===
+    const caloriesData = {
+        consumed: 1900,
+        goal: 2800
+    };
+    const caloriesChart = document.getElementById('caloriesChart').getContext('2d');
+    function drawCaloriesChart() {
+        const ctx = caloriesChart;
+        ctx.clearRect(0, 0, 180, 180);
+        // Fondo
+        ctx.beginPath();
+        ctx.arc(90, 90, 80, 0, 2 * Math.PI);
+        ctx.fillStyle = '#10151e';
+        ctx.fill();
+        // Porción consumida
+        const angle = (caloriesData.consumed / caloriesData.goal) * 2 * Math.PI;
+        ctx.beginPath();
+        ctx.moveTo(90, 90);
+        ctx.arc(90, 90, 70, -0.5 * Math.PI, angle - 0.5 * Math.PI, false);
+        ctx.closePath();
+        ctx.fillStyle = '#60a5fa';
+        ctx.fill();
+        // Porción restante
+        ctx.beginPath();
+        ctx.moveTo(90, 90);
+        ctx.arc(90, 90, 70, angle - 0.5 * Math.PI, 1.5 * Math.PI, false);
+        ctx.closePath();
+        ctx.fillStyle = '#222c3a';
+        ctx.fill();
+        // Círculo interior
+        ctx.beginPath();
+        ctx.arc(90, 90, 45, 0, 2 * Math.PI);
+        ctx.fillStyle = '#0a101a';
+        ctx.fill();
+        // Texto
+        ctx.fillStyle = '#fff';
+        ctx.font = 'bold 1.1rem Segoe UI, Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText(`${caloriesData.consumed} / ${caloriesData.goal}`, 90, 98);
+    }
+    drawCaloriesChart();
+
+    // === Progreso de rutina (Línea) ===
+    const progressData = {
+        labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6'],
+        values: [2, 3, 4, 3, 5, 6] // Ejemplo: cantidad de rutinas completadas por semana
+    };
+    const progressChart = document.getElementById('progressChart').getContext('2d');
+    function drawProgressChart() {
+        const ctx = progressChart;
+        ctx.clearRect(0, 0, 220, 140);
+        // Ejes
+        ctx.strokeStyle = '#60a5fa';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(30, 120);
+        ctx.lineTo(200, 120);
+        ctx.moveTo(30, 120);
+        ctx.lineTo(30, 20);
+        ctx.stroke();
+        // Líneas de guía
+        ctx.strokeStyle = '#222c3a';
+        ctx.lineWidth = 1;
+        for (let i = 1; i <= 4; i++) {
+            ctx.beginPath();
+            ctx.moveTo(30, 120 - i * 20);
+            ctx.lineTo(200, 120 - i * 20);
+            ctx.stroke();
+        }
+        // Línea de progreso
+        ctx.strokeStyle = '#60a5fa';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        let xStep = (170) / (progressData.values.length - 1);
+        progressData.values.forEach((val, i) => {
+            let x = 30 + i * xStep;
+            let y = 120 - val * 16;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        // Puntos
+        ctx.fillStyle = '#fff';
+        progressData.values.forEach((val, i) => {
+            let x = 30 + i * xStep;
+            let y = 120 - val * 16;
+            ctx.beginPath();
+            ctx.arc(x, y, 4, 0, 2 * Math.PI);
+            ctx.fill();
+        });
+        // Etiquetas
+        ctx.fillStyle = '#aaa';
+        ctx.font = '0.8rem Segoe UI, Arial';
+        progressData.labels.forEach((label, i) => {
+            let x = 30 + i * xStep;
+            ctx.fillText(label, x, 135);
+        });
+    }
+    drawProgressChart();
+
+    // Ejemplo de actualización dinámica:
+    // Puedes cambiar los datos y volver a dibujar:
+    // caloriesData.consumed = 2200; drawCaloriesChart();
+    // progressData.values.push(7); progressData.labels.push('Semana 7'); drawProgressChart();
+    </script>
+</body>
+</html>

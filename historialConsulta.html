@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialista Personal - Fitness</title>
+    <!-- <link rel="stylesheet" href="./styles/programarTurno.css"> -->
+    <link rel="stylesheet" href="./styles/historialConsulta.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a class="logo" style="text-decoration: none;" href="./home.html">
+                <img alt="Logo de ReGenera" src="https://framerusercontent.com/images/RokNweUtRE7M37S4ivCoCg0PuB8.png">
+            </a>
+            <!-- Nav -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="profesionales.html">Quienes Somos</a></li>
+                    <li><a href="#servicios">Consultas</a></li>
+                    <li><a href="#sobre">Objetivos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <a href="#" class="btn-primary">Solicitar consulta</a>
+                <a href="#" class="btn-primary btn-perfil">👤</a>
+                <!-- <span>👤</span> -->
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Historial de Consultas</h1>
+            <p>Consulta acá el historial de todas tus consultas con el profesional que elegiste</p>
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <section class="contenedor my-5">
+            <div class="resuProfesional">
+                <div class="imgProfesional">
+                    <img src="./img/prepadorFisico1.jpg" alt="">
+                    <ul>
+                        <li class="boxeo">Boxeo</li>
+                        <li class="fuerza">Fuerza</li>
+                    </ul>
+                </div>
+                <div class="descripcion">
+                    <H2>Consulta N°1</H2>
+                    <p style="color: rgb(97, 97, 97);">Lunes 28/7</p>
+                    <p style="color: rgb(97, 97, 97);">Profesional Lucho Correa</p>
+                    <a href="#" class="boton">Seleccionar</a>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Un especialista a la vuelta de tu pantalla</h3>
+                    <p>ReGenera</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Secciones</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#objetivo">Objetivo</a></li>
+                        <li><a href="#consultas">Consultas</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-column">
+                    <h4>Compañía</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre nosotros</a></li>
+                        <li><a href="#profesionales">Profesionales</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Conecta</h4>
+                    <ul class="footer-links">
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#linkedin">LinkedIn</a></li>
+                        <li><a href="#twitter">X</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">🔄</div>
+                    <span>ReGenera</span>
+                </div>
+                <div class="copyright">
+                    © 2025 ALL RIGHTS RESERVED
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- Scripts necesarios -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+
+    <!-- Aquí podés ejecutar el JS -->
+    <script>
+        $(function () {
+            $('#mi-datepicker').datepicker({
+                format: 'dd/mm/yyyy',
+                language: 'es',
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- Dejar para armar el chat con el LINK -->
+<!-- <section class="mobile-contact">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="chat-interface">
+                        <div class="chat-header">
+                            <div class="chat-avatar">👨‍⚕️</div>
+                            <div class="chat-info">
+                                <h4>Dr. García</h4>
+                                <span>En línea</span>
+                            </div>
+                        </div>
+                        <div style="background: #e3f2fd; padding: 0.5rem; border-radius: 10px; font-size: 0.8rem;">
+                            ¡Hola! ¿Cómo va tu rutina de esta semana?
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section> -->

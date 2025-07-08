@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReGenera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header"></div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="img/imagen-portada.jpg" alt="Imagen portada" class="hero__img-bg" />
+    </div>
+    <div class="hero__content">
+      <h1>Un especialista a la vuelta de tu pantalla</h1>
+      <p class="hero__subtitle">Agendá tu consulta ahora y empezá a cambiar tu estilo de vida.</p>
+      <div class="hero__buttons">
+        <button class="btn btn--primary">Unite ahora</button>
+        <button class="btn btn--secondary">Ingresa</button>
+      </div>
+    </div>
+  </section>
+  <!-- Beneficios Section -->
+  <section class="benefits">
+    <h2 class="benefits__title">¿No podes rendir al 100% en tu deporte favorito?</h2>
+    <p class="benefits__desc">No te preocupes, ofrecemos la solución perfecta para vos, planes de alimentación y rutinas asignados por profesionales.</p>
+    <div class="benefits__grid">
+      <div class="benefit benefit--alimentacion">
+        <div class="benefit__img">
+          <img src="img/imagenes-especialistas/alimentacion.jpg" alt="Alimentación" class="benefit__img-el">
+        </div>
+        <div class="benefit__content">
+          <h3>¿Pensaste en adaptar un plan de alimentación?</h3>
+          <p>Descubre si tu dieta actual te está limitando. Nuestros nutricionistas deportivos te ayudarán a ajustar tu alimentación para optimizar tus resultados.</p>
+          <button class="btn btn--secondary">Ir a profesionales de alimentación</button>
+        </div>
+      </div>
+      <div class="benefit benefit--entrenamiento">
+        <div class="benefit__img">
+          <img src="img/imagenes-especialistas/entrenamiento.jpg" alt="Entrenamiento" class="benefit__img-el">
+        </div>
+        <div class="benefit__content">
+          <h3>¿O mejorar tu rutina de entrenamiento?</h3>
+          <p>Si tu rutina ya no produce resultados, es hora de un cambio. Conecta con coaches y expertos en entrenamiento para diseñar estrategias que te impulsen más allá del estancamiento.</p>
+          <button class="btn btn--secondary">Ir a profesionales de deporte</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="footer"></div>
+  <script>
+    // Cargar header y footer dinámicamente
+    fetch('header.html').then(r => r.text()).then(html => { document.getElementById('header').innerHTML = html; });
+    fetch('footer.html').then(r => r.text()).then(html => { document.getElementById('footer').innerHTML = html; });
+  </script>
+</body>
+</html>

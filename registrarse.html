@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse</title>
+  <link rel="stylesheet" href="registrarse.css">
+</head>
+<body>
+
+  <header>
+    <nav></nav>
+  </header>  
+
+  <div class="header">
+    <img src="./img/registrarse_header.avif" alt="Registro" />
+    <div class="header-content">
+      <small>Registro</small>
+      <h1>Registrarse</h1>
+    </div>
+  </div>
+  <div class="form-container">
+    <h2>¡Bienvenido!</h2>
+    <p>¿Ya te registraste? <a href="login.html">Accede</a></p>
+    <form>
+      <div class="form-group">
+        <label for="nombre">NOMBRE</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Juan/a Martínez" required />
+      </div>
+      <div class="form-group">
+        <label for="correo">CORREO ELECTRÓNICO</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.co" required />
+      </div>
+      <div class="form-group">
+        <label for="clave">CLAVE</label>
+        <div class="input-icon">
+          <input type="password" id="clave" name="clave" placeholder="*****" required />
+          <span title="Mostrar/Ocultar">👁️</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="fecha">FECHA DE NACIMIENTO</label>
+        <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aaaa" required />
+      </div>
+      <a href="registrarse-carac-fisicas.html">SIGUIENTE</a>
+    </form>
+  </div>
+</body>
+</html>
+

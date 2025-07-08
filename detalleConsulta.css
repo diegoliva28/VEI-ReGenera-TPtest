@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: #6366f1;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-perfil {
+    background: #eef0f3;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+/* Hero Section */
+/* Portada de la pagina */
+.hero {
+    background-image: url('../img/home.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    /* margin-bottom: 1rem; */
+    font-weight: 300;
+}
+
+/*Contenendor*/
+.contenedor {
+    padding: 0 10%;
+}
+
+.resuProfesional {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.imgProfesional {
+    width: 100%;
+    max-width:400px;
+    border-radius: 10px;
+}
+
+.imgProfesional img {
+    width: 100%;
+    height: auto;
+}
+
+.resuFecha{
+    height: 300px;
+    margin: 20px 0;
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+.descFecha{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descFecha h2{
+    font-size: 3rem;
+}
+.descFecha p{
+    font-size: 1.5rem;
+    color:rgb(97, 97, 97);
+}
+
+.imgFecha{
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.imgFecha img{
+    width: 85%;
+    height: 100%;
+}
+
+.boton{
+    background: #3b82f6;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+}
+
+/* chat */
+.consultaChat{
+    background-color: rgb(4, 55, 75);
+    padding: 0 20px;
+    border: black solid 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.chatPerfil{
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.descProfesional{
+    display: flex;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.profesionalDatos h3{
+    padding:5px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 5px;
+    font-size: 35px;
+    margin: 0;
+}
+.profesionalDatos ul{
+    color: rgb(140, 116, 84);
+    list-style: none;
+    font-size: 20px;
+    padding: 0;
+}
+
+.chat{
+    margin: 30px;
+    padding: 30px;
+    width: 65%;
+    background-color: white;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.chat-header-paciente {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.chat-avatar {
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #6366f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 3rem 2rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    /* font-size: 1.5rem; */
+    /* margin-bottom: 1rem; */
+    color: white;
+}
+
+.footer-brand p {
+    color: #999;
+    /* line-height: 1.6; */
+}
+
+.footer-column h4 {
+    /* font-size: 1.1rem; */
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.footer-logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.copyright {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .resuProfesional{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .resuFecha{
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    .descFecha{
+        width: 100%;
+    }
+    
+    .imgFecha{
+        width: 100%;
+    }
+
+    .imgFecha img{
+        width: 70%;
+    }
+
+    .resuFecha h2{
+        font-size: 2rem;;
+    }
+
+    .consultaChat{
+        display: block;
+    }
+    .chatPerfil{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .descProfesional{
+        width: 50%;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .profesionalDatos h3{
+        padding: 10px;
+        font-size: 1.1em;
+    }
+
+    .profesionalDatos ul{
+        font-size: 17px;
+    }
+
+    .chat{
+        width: 90%;
+    }
+    
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

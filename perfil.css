@@ -1,0 +1,148 @@
+/* PERFIL */
+.perfil-bg {
+  background: linear-gradient(135deg, #101820 70%, #232946 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+.perfil-main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+}
+.perfil-title {
+  text-align: center;
+  color: var(--color-secundario);
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 2.5rem 0 2.5rem 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.perfil-card {
+  background: rgba(255,255,255,0.07);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  border-radius: 1.2rem;
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  gap: 3.5rem;
+  max-width: 98vw;
+  width: 98%;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+.perfil-avatar-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+  gap: 1.2rem;
+}
+.perfil-avatar-label {
+  color: var(--color-secundario);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.perfil-avatar {
+  width: 180px;
+  height: 180px;
+  background: #888;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+.perfil-avatar-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #222;
+  border: 4px solid #fff;
+}
+.perfil-data-block--columns {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  width: 100%;
+  justify-content: flex-start;
+}
+.perfil-data-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+.perfil-data-block--vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  justify-content: center;
+  width: 100%;
+}
+.perfil-data-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  font-size: 1.18rem;
+  padding: 0.5rem 0 0.5rem 0.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.perfil-data-item:last-child {
+  border-bottom: none;
+}
+.perfil-label {
+  min-width: 180px;
+  color: #a58bff;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.perfil-value {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+@media (max-width: 1100px) {
+  .perfil-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+    width: 99%;
+    max-width: 99vw;
+  }
+  .perfil-data-block--columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .perfil-title {
+    font-size: 2rem;
+  }
+  .perfil-card {
+    padding: 1.2rem 0.5rem;
+    border-radius: 1.2rem;
+  }
+  .perfil-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .perfil-avatar-img {
+    width: 70px;
+    height: 70px;
+  }
+} 

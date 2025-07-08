@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <header>
+    <nav></nav>
+  </header>
+  <div class="header">
+    <img src="./img/registrarse_header.avif" alt="Login">
+    <div class="header-content">
+      <h1>Ingresar</h1>
+    </div>
+  </div>
+  <div class="form-container">
+    <h2>¡Bienvenido de nuevo!</h2>
+    <p>¿Todavía no tenés cuenta? <a href="registrarse.html">Regístrate</a></p>
+    <form>
+      <div class="form-group">
+        <label for="correo">CORREO ELECTRÓNICO</label>
+        <input type="email" id="correo" name="correo" placeholder="hola@sitioincreible.co" required />
+      </div>
+      <div class="form-group">
+        <label for="clave">CLAVE</label>
+        <div class="input-icon">
+          <input type="password" id="clave" name="clave" placeholder="******" required />
+          <span title="Mostrar/Ocultar">👁️</span>
+        </div>
+      </div>
+      <a href="index.html" type="submit">ENTRAR</a>
+    </form>
+    <p class="forgot">¿Olvidaste tu contraseña? <a href="#">Clickea acá.</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetivo</title>
+  <link rel="stylesheet" href="objetivo.css">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+        <img src="./img/imagotipo.png" alt="Logo ReGenera">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Consultas</a></li>
+        <li><a href="#">Objetivos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-consulta">Solicitar consulta</button>
+        <div class="user-icon">
+          <span>👤</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="header-img">
+    <img src="./img/objetivo.avif" alt="Imagen objetivo" />
+    <div class="header-content">
+      <span class="breadcrumb">Registrarse &gt; Características físicas &gt; <span class="active">Objetivo</span></span>
+      <h1>Objetivo</h1>
+    </div>
+  </div>
+  <div class="form-container">
+    <h2>¡Último paso!</h2>
+    <form style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+      <button type="button" class="goal-btn">PERDER PESO</button>
+      <button type="button" class="goal-btn">GANAR PESO</button>
+      <button type="button" class="goal-btn">MANTENERSE</button>
+
+      <a href="index.html" class="register-btn" style="text-align: center;">REGISTRARSE</a>
+    </form>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const goalBtns = document.querySelectorAll('.goal-btn');
+      goalBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          goalBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html> 

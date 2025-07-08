@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fff;
+}
+
+.header {
+    width: 100%;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px 0 20px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    margin-left: 40px;
+}
+
+.nav a {
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.consulta-btn {
+    background: #3d6eff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 22px;
+    font-size: 14px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.perfil-icono {
+    background: #f2f2f2;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.header-img-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+    padding-left: 80px;
+}
+
+.breadcrumb {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.header-overlay h1 {
+    font-size: 48px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.form-section {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.carac-form {
+    background: #0c151b;
+    border-radius: 12px;
+    padding: 40px 50px 32px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.carac-form h2 {
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.carac-form label {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    align-self: flex-start;
+}
+
+.carac-form input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.carac-form a {
+    margin-top: 18px;
+    width: 100%;
+    background: #3d6eff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.carac-form a:hover {
+    background: #2446a6;
+}
