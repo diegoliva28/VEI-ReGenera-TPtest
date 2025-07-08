@@ -4,7 +4,9 @@ body {
     background: #fff;
     min-height: 100vh;
   }
-  .header {
+  
+  /* Estilos para la imagen del header de la página, no para el header principal */
+  .page-header-img {
     position: relative;
     width: 100%;
     height: 200px;
@@ -16,7 +18,8 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .header img {
+  
+  .page-header-img img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,23 +29,28 @@ body {
     left: 0;
     z-index: 1;
   }
+  
   .header-content {
     position: relative;
     z-index: 2;
     color: #fff;
     text-align: center;
+    padding: 0 20px;
   }
+  
   .header-content small {
     display: block;
     font-size: 12px;
     opacity: 0.8;
     margin-bottom: 10px;
   }
+  
   .header-content h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 400;
   }
+  
   .form-container {
     background: #0d1821;
     max-width: 400px;
@@ -54,22 +62,28 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
+  
   .form-container h2 {
     color: #fff;
     font-size: 1.3rem;
     margin-bottom: 4px;
     font-weight: 700;
+    text-align: center;
   }
+  
   .form-container p {
     color: #b0b8c1;
     font-size: 0.95rem;
     margin-bottom: 24px;
+    text-align: center;
   }
+  
   .form-group {
     margin-bottom: 18px;
     display: flex;
     flex-direction: column;
   }
+  
   .form-group label {
     color: #fff;
     font-size: 0.85rem;
@@ -77,6 +91,7 @@ body {
     margin-bottom: 4px;
     letter-spacing: 0.5px;
   }
+  
   .form-group input {
     padding: 8px 12px;
     border-radius: 4px;
@@ -87,18 +102,22 @@ body {
     outline: none;
     transition: background 0.2s;
   }
+  
   .form-group input:focus {
     background: #223047;
   }
+  
   .form-group .input-icon {
     position: relative;
     display: flex;
     align-items: center;
   }
+  
   .form-group .input-icon input {
     width: 100%;
     padding-right: 32px;
   }
+  
   .form-group .input-icon span {
     position: absolute;
     right: 8px;
@@ -107,6 +126,7 @@ body {
     cursor: pointer;
     user-select: none;
   }
+  
   .form-container a {
     background: #3498ff;
     color: #fff;
@@ -118,20 +138,86 @@ body {
     cursor: pointer;
     margin-top: 10px;
     transition: background 0.2s;
+    text-decoration: none;
+    text-align: center;
   }
+  
   .form-container button:hover {
     background: #2176c7;
   }
-  @media (max-width: 500px) {
-    .form-container {
-      padding: 24px 8px 16px 8px;
-      max-width: 98vw;
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .page-header-img {
+      height: 160px;
     }
-    .header {
-      height: 120px;
+    
+    .header-content {
+      padding: 0 15px;
     }
+    
     .header-content h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
+    }
+    
+    .header-content small {
+      font-size: 11px;
+    }
+    
+    .form-container {
+      margin: 40px auto 0 auto;
+      padding: 30px 20px 25px 20px;
+      max-width: 350px;
+    }
+    
+    .form-container h2 {
+      font-size: 1.2rem;
+    }
+    
+    .form-container p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-header-img {
+      height: 140px;
+    }
+    
+    .header-content {
+      padding: 0 10px;
+    }
+    
+    .header-content h1 {
+      font-size: 1.8rem;
+    }
+    
+    .header-content small {
+      font-size: 10px;
+    }
+    
+    .form-container {
+      margin: 30px auto 0 auto;
+      padding: 25px 15px 20px 15px;
+      max-width: 320px;
+    }
+    
+    .form-container h2 {
+      font-size: 1.1rem;
+    }
+    
+    .form-container p {
+      font-size: 0.85rem;
+    }
+    
+    .form-group input {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+    
+    .form-container a {
+      padding: 4px 8px;
+      font-size: 0.9rem;
     }
   }
 

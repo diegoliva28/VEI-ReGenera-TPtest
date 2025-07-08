@@ -4,11 +4,13 @@ body {
     background: #fff;
 }
 
-.header {
+/* Remover estilos del header que interfieren con el header principal */
+/* .header {
     width: 100%;
-}
+} */
 
-.header-top {
+/* Estos estilos ya no son necesarios porque usamos el header.html */
+/* .header-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,9 +58,10 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 22px;
-}
+} */
 
-.header-img-container {
+/* Estilos para la imagen del header de la página */
+.page-header-img {
     position: relative;
     width: 100%;
     height: 220px;
@@ -68,7 +71,7 @@ body {
     justify-content: center;
 }
 
-.header-img {
+.page-header-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -119,6 +122,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0 20px;
 }
 
 .carac-form {
@@ -129,6 +133,8 @@ main {
     flex-direction: column;
     align-items: center;
     min-width: 350px;
+    max-width: 450px;
+    width: 100%;
     box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
@@ -138,6 +144,7 @@ main {
     font-family: 'Montserrat', Arial, sans-serif;
     margin-bottom: 30px;
     font-weight: 700;
+    text-align: center;
 }
 
 .carac-form label {
@@ -147,16 +154,29 @@ main {
     margin-top: 10px;
     margin-bottom: 3px;
     align-self: flex-start;
+    font-weight: 600;
 }
 
 .carac-form input {
     width: 100%;
-    padding: 8px 10px;
+    padding: 12px 15px;
     border-radius: 6px;
     border: none;
     margin-bottom: 10px;
     font-size: 15px;
     font-family: 'Montserrat', Arial, sans-serif;
+    background: #1a252f;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.carac-form input:focus {
+    outline: none;
+    background: #2a3743;
+}
+
+.carac-form input::placeholder {
+    color: #8a9ba8;
 }
 
 .carac-form a {
@@ -166,7 +186,7 @@ main {
     color: #fff;
     border: none;
     border-radius: 6px;
-    padding: 10px 0;
+    padding: 12px 0;
     font-size: 16px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 700;
@@ -178,4 +198,103 @@ main {
 
 .carac-form a:hover {
     background: #2446a6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header-img {
+        height: 180px;
+    }
+    
+    .header-overlay {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .header-overlay h1 {
+        font-size: 36px;
+    }
+    
+    .breadcrumb {
+        font-size: 14px;
+    }
+    
+    main {
+        margin-top: 40px;
+    }
+    
+    .form-section {
+        padding: 0 15px;
+    }
+    
+    .carac-form {
+        padding: 30px 30px 25px 30px;
+        min-width: 300px;
+    }
+    
+    .carac-form h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .carac-form input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .carac-form a {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header-img {
+        height: 150px;
+    }
+    
+    .header-overlay {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .header-overlay h1 {
+        font-size: 28px;
+    }
+    
+    .breadcrumb {
+        font-size: 13px;
+    }
+    
+    main {
+        margin-top: 30px;
+    }
+    
+    .form-section {
+        padding: 0 10px;
+    }
+    
+    .carac-form {
+        padding: 25px 20px 20px 20px;
+        min-width: 280px;
+    }
+    
+    .carac-form h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .carac-form label {
+        font-size: 12px;
+    }
+    
+    .carac-form input {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .carac-form a {
+        padding: 8px 0;
+        font-size: 14px;
+    }
 }

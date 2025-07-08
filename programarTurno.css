@@ -84,12 +84,34 @@ body {
     justify-content: center;
     /* text-align: center; */
     color: white;
+    position: relative;
+}
+
+/* Overlay oscuro para mejorar el contraste del texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     /* margin-bottom: 1rem; */
-    font-weight: 300;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
 }
 
 /*Contenendor*/
@@ -127,6 +149,33 @@ body {
     font-size: 25px;
 }
 
+/* Sobrescribir el color heredado de perfil-bg para el contenedor principal */
+.perfil-bg .contenedor {
+    color: #333;
+}
+
+.perfil-bg .contenedor h4,
+.perfil-bg .contenedor label,
+.perfil-bg .contenedor p,
+.perfil-bg .contenedor span {
+    color: #333;
+}
+
+.perfil-bg .diaHora {
+    color: #333;
+}
+
+.perfil-bg .hora {
+    color: #333;
+}
+
+.perfil-bg .hora label {
+    color: #333;
+}
+
+.perfil-bg #horario {
+    color: #333;
+}
 
 
 /* Responsive Design */
@@ -137,18 +186,26 @@ body {
 
     .hero-content h1 {
         font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-  .datepicker,
-  .table-condensed {
-    width: 100% !important;
-    font-size: 1rem !important;
-  }
-  .datepicker td,
-  .datepicker th {
-    width: 2rem !important;
-    height: 2rem !important;
-    line-height: 2rem !important;
-  }
+
+    .hero {
+        height: 30vh;
+    }
+
+    .datepicker,
+    .table-condensed {
+        width: 100% !important;
+        font-size: 1rem !important;
+    }
+    .datepicker td,
+    .datepicker th {
+        width: 2rem !important;
+        height: 2rem !important;
+        line-height: 2rem !important;
+    }
 
     .footer-top {
         grid-template-columns: 1fr;
@@ -164,6 +221,19 @@ body {
     .phone-mockup {
         width: 200px;
         height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero {
+        height: 25vh;
     }
 }
 

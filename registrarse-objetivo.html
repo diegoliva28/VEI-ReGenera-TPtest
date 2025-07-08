@@ -2,30 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Objetivo</title>
-  <link rel="stylesheet" href="objetivo.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="registrarse.css">
+  <link rel="stylesheet" href="objetivos.css">
 </head>
-<body>
-  <header>
-    <nav class="main-nav">
-      <div class="logo">
-        <img src="./img/imagotipo.png" alt="Logo ReGenera">
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Consultas</a></li>
-        <li><a href="#">Objetivos</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="btn-consulta">Solicitar consulta</button>
-        <div class="user-icon">
-          <span>👤</span>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <div class="header-img">
+<body class="objetivos-page">
+  <div id="header"></div>
+  <div class="page-header-img">
     <img src="./img/objetivo.avif" alt="Imagen objetivo" />
     <div class="header-content">
       <span class="breadcrumb">Registrarse &gt; Características físicas &gt; <span class="active">Objetivo</span></span>
@@ -39,10 +27,10 @@
       <button type="button" class="goal-btn">GANAR PESO</button>
       <button type="button" class="goal-btn">MANTENERSE</button>
 
-      <a href="index.html" class="register-btn" style="text-align: center;">REGISTRARSE</a>
+      <a href="home.html" class="register-btn" style="text-align: center;">REGISTRARSE</a>
     </form>
   </div>
-
+  <div id="footer"></div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -54,6 +42,10 @@
         });
       });
     });
+  </script>
+  <script>
+    fetch('header.html').then(r => r.text()).then(html => { document.getElementById('header').innerHTML = html; });
+    fetch('footer.html').then(r => r.text()).then(html => { document.getElementById('footer').innerHTML = html; });
   </script>
 </body>
 </html> 

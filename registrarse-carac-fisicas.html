@@ -2,34 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Características físicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="carac-fisicas.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="header-top">
-            <img src="./img/imagotipo.png" alt="ReGenera Logo" class="logo">
-            <nav class="nav">
-                <a href="#">Consultas</a>
-                <a href="#">Objetivos</a>
-                <a href="#">Contacto</a>
-            </nav>
-            <button class="consulta-btn">Solicitar consulta</button>
-            <div class="perfil-icono">
-                <span>👤</span>
-            </div>
-        </div>
-        <div class="header-img-container">
+    <div id="header"></div>
+    <main>
+        <div class="page-header-img">
             <img src="./img/registrarse_header.avif" alt="Header" class="header-img">
             <div class="header-overlay">
                 <div class="breadcrumb">Registrarse > <span>Características físicas</span></div>
                 <h1>Características físicas</h1>
             </div>
         </div>
-    </header>
-    <main>
         <section class="form-section">
             <form class="carac-form">
                 <h2>Ya casi...</h2>
@@ -43,5 +33,11 @@
             </form>
         </section>
     </main>
+    <div id="footer"></div>
+
+    <script>
+        fetch('header.html').then(r => r.text()).then(html => { document.getElementById('header').innerHTML = html; });
+        fetch('footer.html').then(r => r.text()).then(html => { document.getElementById('footer').innerHTML = html; });
+    </script>
 </body>
 </html>

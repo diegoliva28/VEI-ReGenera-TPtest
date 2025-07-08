@@ -86,12 +86,34 @@ body {
     justify-content: center;
     /* text-align: center; */
     color: white;
+    position: relative;
+}
+
+/* Overlay oscuro para mejorar el contraste del texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     /* margin-bottom: 1rem; */
-    font-weight: 300;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
 }
 
 /* Team Section */
@@ -99,21 +121,24 @@ body {
     background: #f8f9fa;
     padding: 4rem 2rem;
     /* text-align: center; */
+    color: #333;
 }
 
 .team-container {
     max-width: 1500px;
     margin: 0 auto;
+    color: #333;
 }
 
 .team-section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: #333;
 }
 
 .team-section .subtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: #333;
     margin-bottom: 1rem;
     max-width: 500px;
 }
@@ -126,15 +151,28 @@ body {
 }
 
 .team-card {
-    /* background: white; */
+    background: white;
     border-radius: 15px;
     padding: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    color: #333;
 }
 
 .team-card:hover {
     transform: translateY(-5px);
+}
+
+/* Sobrescribir el color heredado de perfil-bg */
+.perfil-bg .team-section,
+.perfil-bg .team-container,
+.perfil-bg .team-card,
+.perfil-bg .team-card * {
+    color: #333;
+}
+
+.perfil-bg .team-card .btn-contact {
+    color: white;
 }
 
 /* photo */
@@ -171,6 +209,8 @@ body {
   position: relative;
   padding-left: 40px; 
   margin-bottom: 12px;
+  color: #333;
+  font-weight: 500;
 }
 
 
@@ -232,7 +272,7 @@ body {
 }
 
 .team-card p {
-    color: #000000;
+    color: #333;
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
@@ -254,6 +294,29 @@ body {
 
 .team-card .btn-contact:hover {
     background: #555;
+}
+
+/* Asegurar que todos los textos en las tarjetas sean negros */
+.team-card * {
+    color: #333;
+}
+
+.team-card .btn-contact {
+    color: white;
+}
+
+.team-card h2,
+.team-card h3,
+.team-card h4,
+.team-card h5,
+.team-card h6 {
+    color: #333;
+}
+
+.team-card p,
+.team-card span,
+.team-card li {
+    color: #333;
 }
 
 /* .team-section {
@@ -449,6 +512,13 @@ body {
 
     .hero-content h1 {
         font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero {
+        height: 30vh;
     }
 
     /* .team-grid {
@@ -469,5 +539,18 @@ body {
     .phone-mockup {
         width: 200px;
         height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero {
+        height: 25vh;
     }
 }

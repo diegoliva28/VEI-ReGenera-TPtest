@@ -5,65 +5,203 @@
   padding: 0;
 }
 
-body {
+/* Solo aplicar el fondo oscuro al contenido principal, no al body completo */
+.objetivos-page {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #0a101a;
   color: #fff;
   min-height: 100vh;
 }
 
-.header {
-  background: #fff;
-  color: #222;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+/* Asegurar que el header mantenga su estilo */
+#header .header {
+  background: #fff !important;
+  color: #111 !important;
 }
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
+
+#header .header * {
+  color: inherit;
 }
-.logo img {
-  height: 40px;
-}
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-.nav-menu a {
-  color: #222;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-.nav-menu a:hover {
-  color: #007bff;
-}
-.nav-buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.btn-primary {
-  background: #2563eb;
+
+/* Estilos para los botones de objetivo */
+.goal-btn {
+  background: #1b2631;
   color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  border: none;
+  border: 2px solid #3498ff;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+.goal-btn:hover {
+  background: #3498ff;
+  border-color: #3498ff;
+}
+
+.goal-btn.active {
+  background: #3498ff;
+  border-color: #3498ff;
+}
+
+/* Estilos para el botón de registro */
+.register-btn {
+  background: #3498ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
   text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.register-btn:hover {
+  background: #2176c7;
+}
+
+/* Estilos para la imagen del header de la página */
+.page-header-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.form-container {
+  background: #0d1821;
+  max-width: 400px;
+  margin: 60px auto 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 40px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-container h2 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-container p {
+  color: #b0b8c1;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  background: #1b2631;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
   transition: background 0.2s;
 }
-.btn-primary:hover {
-  background: #1e40af;
+
+.form-group input:focus {
+  background: #223047;
 }
-.user-icon {
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
+
+.form-group .input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-group .input-icon input {
+  width: 100%;
+  padding-right: 32px;
+}
+
+.form-group .input-icon span {
+  position: absolute;
+  right: 8px;
+  color: #b0b8c1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-container a {
+  background: #3498ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.form-container button:hover {
+  background: #2176c7;
 }
 
 .dashboard {
@@ -210,6 +348,84 @@ body {
 
 
 /* Responsive */
+@media (max-width: 768px) {
+  .page-header-img {
+    height: 160px;
+  }
+  
+  .header-content {
+    padding: 0 15px;
+  }
+  
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  
+  .breadcrumb {
+    font-size: 11px;
+  }
+  
+  .form-container {
+    margin: 40px auto 0 auto;
+    padding: 30px 20px 25px 20px;
+    max-width: 350px;
+  }
+  
+  .form-container h2 {
+    font-size: 1.2rem;
+  }
+  
+  .goal-btn {
+    width: 180px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .register-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-img {
+    height: 140px;
+  }
+  
+  .header-content {
+    padding: 0 10px;
+  }
+  
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .breadcrumb {
+    font-size: 10px;
+  }
+  
+  .form-container {
+    margin: 30px auto 0 auto;
+    padding: 25px 15px 20px 15px;
+    max-width: 320px;
+  }
+  
+  .form-container h2 {
+    font-size: 1.1rem;
+  }
+  
+  .goal-btn {
+    width: 160px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .register-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 900px) {
   .dashboard-grid {
     grid-template-columns: 1fr;
