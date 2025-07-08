@@ -207,41 +207,7 @@ body {
   padding: 2rem 0 1rem 0;
   margin-top: 3rem;
 }
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 0 2rem;
-}
-.footer-brand h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-.footer-links, .footer-social {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.footer-links a, .footer-social a {
-  color: #60a5fa;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-.footer-links a:hover, .footer-social a:hover {
-  color: #fff;
-}
-.footer-bottom {
-  width: 100%;
-  text-align: center;
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-  color: #aaa;
-}
+
 
 /* Responsive */
 @media (max-width: 900px) {

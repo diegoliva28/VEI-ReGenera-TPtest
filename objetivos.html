@@ -5,27 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Objetivos - ReGenera</title>
     <link rel="stylesheet" href="./styles/objetivos.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="nav-container">
-            <a class="logo" href="#"><img src="./img/logo.jpeg" alt="Logo ReGenera" height="40"></a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#quienes">Quienes somos</a></li>
-                    <li><a href="#consultas">Consultas</a></li>
-                    <li><a href="#objetivos">Objetivos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="nav-buttons">
-                <a href="#" class="btn-primary">Solicitar consulta</a>
-                <span class="user-icon">👤</span>
-            </div>
-        </div>
-    </header>
-
+    <div id="header"></div>
     <!-- Main Content -->
     <main class="dashboard">
         <section class="profile-section">
@@ -81,34 +64,10 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>Un especialista a la vuelta de tu pantalla</h3>
-                <p>ReGenera</p>
-            </div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#objetivo">Objetivo</a>
-                <a href="#consultas">Consultas</a>
-                <a href="#sobre">Sobre nosotros</a>
-                <a href="#profesionales">Profesionales</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-            <div class="footer-social">
-                <a href="#instagram">Instagram</a>
-                <a href="#linkedin">LinkedIn</a>
-                <a href="#twitter">X</a>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2025 ALL RIGHTS RESERVED - ReGenera</span>
-            </div>
-        </div>
-    </footer>
-
+    <div id="footer"></div>
     <script>
+    fetch('header.html').then(r => r.text()).then(html => { document.getElementById('header').innerHTML = html; });
+    fetch('footer.html').then(r => r.text()).then(html => { document.getElementById('footer').innerHTML = html; });
     // === Calorías diarias (Doughnut) ===
     const caloriesData = {
         consumed: 1900,
@@ -208,11 +167,6 @@
         });
     }
     drawProgressChart();
-
-    // Ejemplo de actualización dinámica:
-    // Puedes cambiar los datos y volver a dibujar:
-    // caloriesData.consumed = 2200; drawCaloriesChart();
-    // progressData.values.push(7); progressData.labels.push('Semana 7'); drawProgressChart();
     </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* FOOTER */
 .footer {
   margin-top: 4rem;
-  background: var(--color-fondo-footer);
+  background: #0f172a;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: var(--color-acento);
+  background: #1e40af;
   padding: 2.5rem 4vw 2.5rem 3vw;
   border-radius: 0 0 2rem 2rem;
 }
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   gap: 2.5rem;
-  background: var(--color-acento);
+  background: #1e40af;
   border-radius: 1.5rem;
   padding: 1.2rem 2.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -57,7 +57,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 2.5rem 4vw 2.5rem 3vw;
-  background: var(--color-fondo-footer);
+  background: #0f172a;
   flex-wrap: wrap;
 }
 .footer-brand {
@@ -93,7 +93,7 @@
   transition: color 0.2s;
 }
 .footer-links a:hover {
-  color: var(--color-acento);
+  color: #3b82f6;
 }
 .footer-copy {
   color: #888;
